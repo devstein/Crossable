@@ -1,0 +1,39 @@
+/* CROSSABLE CHARTS */
+body{
+	font-family: verdana
+	font-size: 75%
+}
+
+#crossableNav{
+	width:800px;
+	text-align:center;
+	margin:5px auto;
+}
+
+#crossableNav ul {
+	list-style:none;
+	display: inline-block;
+	margin: 0;
+}
+
+#crossableNav ul li {
+	float:left;
+	margin: 15px 10px;
+}
+
+#crossableNav ul li a{
+	color:#FFF;
+	font-weight:bold;
+	padding:6px 12px;
+	background:#43C5F3;
+	text-decoration:none;	
+}
+
+#crossableNav ul li a:hover {
+	background:#2896C6;
+}
+
+#crossableNavLabel{
+	font-weight: bold;
+	color: #DBBB33;
+}
