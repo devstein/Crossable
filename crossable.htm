@@ -1,0 +1,101 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<script src="https://code.jquery.com/jquery-1.9.0.js" type="text/javascript"></script>
+
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+
+<script type="text/javascript" src="C:\Users\devin\Documents\MarketAxess\OtherCode\AccessoryFunctions.js"></script>
+<script type="text/javascript" src="C:\Users\devin\Documents\MarketAxess\OtherCode\ErrorHandling.js"></script>
+<script type="text/javascript" src="C:\Users\devin\Documents\MarketAxess\OtherCode\DownloadAndEmailFunctionality.js"></script>
+
+
+<link href="C:\Users\devin\Documents\MarketAxess\OtherCode\style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+
+<div id="all info">
+
+	<div id="charts">
+
+		<div id="crossable_overall_by_cusip_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_overall_by_vol_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_overall_by_cusip_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_overall_by_vol_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>  
+
+        <div id="crossable_size_by_cusip_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_size_by_vol_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_size_by_cusip_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_size_by_vol_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        
+        <div id="crossable_maturity_by_cusip_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_maturity_by_vol_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_maturity_by_cusip_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_maturity_by_vol_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+
+        <div id="crossable_top_by_cusip_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_top_by_vol_hg_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_top_by_cusip_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+        <div id="crossable_top_by_vol_hy_container" class="chart_container" style="width:800px; height: 600px; margin: 0 auto">Loading...</div>
+
+	</div>
+
+    <div id="crossableNav">
+        	<ul class="by_cusip_buttons">
+                <li style="font-weight: bold; color:#DBBB33">HG: </li>
+        		<li><a type="button" class="chart-btn" data-chart="crossable_overall_by_cusip_hg" id="crossable_overall_by_cusip_hg_btn">Overall</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_size_by_cusip_hg" id="crossable_overall_by_cusip_hg_btn">By Size</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_maturity_by_cusip_hg" id="crossable_overall_by_cusip_hg_btn">By Maturity</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_top_by_cusip_hg" id="crossable_overall_by_cusip_hg_btn">By Liquidity</a></li>
+            </ul>
+            <ul class="by_vol_buttons">
+                <li style="font-weight: bold; color:#DBBB33">HG: </li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_overall_by_vol_hg" id="crossable_overall_by_vol_hg_btn">Overall</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_size_by_vol_hg" id="crossable_overall_by_vol_hg_btn">By Size</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_maturity_by_vol_hg" id="crossable_overall_by_vol_hg_btn">By Maturity</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_top_by_vol_hg" id="crossable_overall_by_vol_hg_btn">By Liquidity</a></li>
+            </ul>
+            <ul class="by_cusip_buttons">
+                <li style="font-weight: bold; color:#DBBB33">HY: </li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_overall_by_cusip_hy" id="crossable_overall_by_cusip_hy_btn">Overall</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_size_by_cusip_hy" id="crossable_overall_by_cusip_hy_btn">By Size</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_maturity_by_cusip_hy" id="crossable_overall_by_cusip_hy_btn">By Maturity</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_top_by_cusip_hy" id="crossable_overall_by_cusip_hy_btn">By Liquidity</a></li>
+            </ul>
+            <ul class="by_vol_buttons">
+                <li style="font-weight: bold; color:#DBBB33">HY: </li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_overall_by_vol_hy" id="crossable_overall_by_vol_hy_btn">Overall</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_size_by_vol_hy" id="crossable_overall_by_vol_hy_btn">By Size</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_maturity_by_vol_hy" id="crossable_overall_by_vol_hy_btn">By Maturity</a></li>
+                <li><a type="button" class="chart-btn" data-chart="crossable_top_by_vol_hy" id="crossable_overall_by_vol_hg_btn">By Liquidity</a></li>
+            </ul>
+    </div>
+</body>
+
+
+
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Crossable</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+</head>
+
+
+
+<script src="C:\Users\devin\Documents\MarketAxess\Crossable\crossable_bonds.js" type="text/javascript"></script>
+
+</body>
+</html>
+
